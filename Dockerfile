@@ -11,7 +11,9 @@ RUN pip install --extra-index-url https://alpine-wheels.github.io/index TheengsG
 
 FROM python:alpine
 
+RUN apk --no-cache libstdc++
 RUN adduser -D theengsgw
+
 WORKDIR /home/theengsgw
 ENV VIRTUAL_ENV=/home/theengsgw/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
