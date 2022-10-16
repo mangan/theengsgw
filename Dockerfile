@@ -17,7 +17,7 @@ WORKDIR /home/theengsgw
 ENV VIRTUAL_ENV=/home/theengsgw/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-COPY --from=builder --chown theengsgw /home/theengsgw/venv /home/theengsgw
+COPY --from=builder --chown=theengsgw /home/theengsgw/venv /home/theengsgw
 
 USER theengsgw
 
