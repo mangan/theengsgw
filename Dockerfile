@@ -7,7 +7,6 @@ ENV VIRTUAL_ENV=/home/theengsgw/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-USER theengsgw
 RUN pip install --extra-index-url https://alpine-wheels.github.io/index TheengsGateway
 
 FROM python:alpine
