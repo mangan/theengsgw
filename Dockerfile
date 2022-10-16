@@ -11,7 +11,7 @@ RUN pip install --extra-index-url https://alpine-wheels.github.io/index TheengsG
 
 FROM python:alpine
 
-RUN apk --no-cache libstdc++
+RUN apk add --no-cache libstdc++
 RUN adduser -D theengsgw
 
 WORKDIR /home/theengsgw
