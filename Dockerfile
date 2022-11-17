@@ -6,6 +6,7 @@ ENV VIRTUAL_ENV=/home/theengsgw/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
+RUN apt update; yes|apt install cmake ninja-build
 RUN pip install --extra-index-url=https://www.piwheels.org/simple TheengsGateway
 
 FROM python:slim
